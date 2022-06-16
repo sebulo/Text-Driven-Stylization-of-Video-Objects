@@ -1,66 +1,82 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Test-Driven Stylization of Video Objects</title>
-<link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Text-Driven Stylization of Video Objects">
+    <meta name="author"
+          content="Sebastian Loeschcke, Sagie Benaim">
+
+    <title>Text-Driven Stylization of Video Objects</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--    <link rel="icon" href="img/favicon.gif" type="image/gif">-->
 </head>
 
 <body>
-<div class="container">
-  <h1 align="center">Text-Driven Stylization of Video Objects</h1>
-  <p>&nbsp;</p>
-  <ul>
-    <li><a href="#teaser">Teaser (Fig. 1)</a></li>
-    <li><a href="#example_res">Example Results (Fig. 4)</a></li>
-    <li><a href="#text_specificity">Target Text Specificity (Fig. 5)</a></li>
-    <li><a href="#prefix_aug">Prefix Augmentation (Fig. 6)</a></li>
-    <li><a href="#ablation"> Ablation On Each Loss Term (Fig. 7)</a></li>
-    <li><a href="#globa_local_semantics">Global and Local Semantics (Fig. 8)</a></li>
-    <li><a href="#limitations">Limitations (Fig. 9)</a></li>
-  </ul>
-  <p>&nbsp;</p>
-  <hr />
-  <h2 align="left"><a name="teaser" id="teaser"></a>Teaser</h2>
-  <p align="left">
-    The following videos correspond to Fig. 1 of the paper. <br />
-    The first video in (a) is the input video and the second and third are the stylized videos. <br />
-    The target texts used for the stylization:
-     <ul>
-      <li>(b) Global target text: "Swan made out of cactus" </li>
-      <li>(c) Global target text: “Swan with crocodile skin”</li>
-     </ul>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container"></div>
+    <h2>Text-Driven Stylization of Video Objects</h2>
+    <hr>
+    <p class="authors">
+        <a href="https://sloeschcke.github.io/"> Sebastian Loeschcke<sup>1</sup></a>,
+        <a href="https://sagiebenaim.github.io/"> Sagie Benaim<sup>2</sup></a>
     </p>
-    <table width="200" border="0" align="center">
-      <tbody>
-        <tr>
-          <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/examples_fig4/org_swan.mp4" type="video/mp4" />
-          </video></td>
-             <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/teaser_fig1/swan_made_out_of_cactus_catus_skin.mp4" type="video/mp4" />
-                      </video></td>
-             <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/teaser_fig1/crocodile_swan_teaser.mp4" type="video/mp4" />
-                      </video></td>
-          </td>
-        </tr>
-        <tr>
-          <td align="center">(a)</td>
-            <td align="center">(b)</td>
-            <td align="center">(c)</td>
-        </tr>
-      </tbody>
-    </table>  <p></p>
-    <p align="left"></p>
-  
-  <hr />
-  <h2 align="left"><a name="example_res" id="example_res"></a>Example Results</h2>
+    <p class="authors">
+  &nbsp;&nbsp; Aarhus University<sup>1</sup> University of Copenhagen<sup>2</sup>
+    </p>
+    <div class="btn-group" role="group" aria-label="Top menu">
+        <a align="center" class="btn btn-primary" href="http://arxiv.org/abs/2206.02776">Paper</a>
+    </div>
+</div>
+
+
+<div class="container" style="margin-top:-40px;">
+    <div class="section">
+        <h3 align="center">Abstract</h3>
+        <hr>
+        <p>
+            We tackle the task of stylizing video objects in an intuitive and semantic
+            manner following a user-specified text prompt. This task is challenging as the
+            resulting video must satisfy multiple properties: (1) it has to be temporally
+            consistent and avoid jittering or similar artifacts, (2) the resulting stylization
+            must preserve both the global semantics of the object and its fine-grained details, and (3) it must adhere to the user-specified text prompt. To this end, our
+            method stylizes an object in a video by predicting the color of individual pixels
+            according to a global target text prompt that describes the global semantics
+            and a local target text prompt that describes the local semantics. To modify
+            the style of an object, we harness the representational power of CLIP to get
+            a similarity score between (1) the local target text and a set of local stylized
+            views, and (2) a global target text and a set of stylized global views. We use a
+            pretrained atlas decomposition network to propagate the edits in a temporally
+            consistent manner. We demonstrate that our method is able to generate consistent style changes in time for a variety of objects and videos, that adhere to
+            the specification of the target texts. We also show how varying the specificity
+            of the target texts, and augmenting the texts with a set of prefixes results
+            in stylizations with different levels of detail.
+        <br>
+        <br>
+        <b> TL;DR </b> We propose a framework for stylizing objects in videos using a text-prompt.
+        </p>
+	<img align="center"  src="files/teaser.jpg"
+             style="width:100%; margin-right:-20px; margin-top:20px;">
+      <div class="section">
+        <h2>Results</h2>
+          <p align="left">
+          Our results show how we can succesfully apply a stylization to a variety of objects and videos. We also demonstrate how using prefixes and an increasing specificity for the target texts, results in more detailed stylizations<br />
+          <p align="left"></p>          
+        <hr>
+    </div>
+
+  <h2 align="left"><a name="example_results" id="example_results"></a>Example Results</h2>
   <p align="left">
-    The following videos correspond to Fig. 4 of the paper, showing three videos and two stylizations for each video. 
+    The following results show how we can successfully apply a stylization to a variety of objects and videos for a different set of target texts. 
     The first video corresponds to the input video and the others correspond to stylizations applied to the input video.
   <p align="left"></p>
-  <table width="200" border="0" align="center">
+  <table width="80%" border="0" align="center">
     <tbody>
       <tr>
       
@@ -115,79 +131,74 @@
       </tr>
     </tbody>
   </table>
-    
-  <hr />
-  <h2 align="left"><a name="text_specificity" id="text_specificity"></a>Target Text Specificity</h2>
-  <p align="left">
-    The following videos correspond to Fig. 5 of the paper.  <br />
-    The experiment shows the specificity of a target affects the stylization.   <br />
-    The first column show the swan examples and the second column shows the boat examples.  <br />
-    Global target text prompts:
-    <ul>
-      <li>Row one: (a) ”Armor”, (b) ”Iron armor”, (c) ”Medieval iron armor”, (d) ”Suit of shiny medieval iron armor”, (e) ”Full plate shiny medieval iron armor”  </li>
-      <li>Row two: (a) ”Boat made of wood”, (b) ”Boat made of dark walnut wood" (c) ”Fishing boat made of wood”, (d) ”Old fishing boat made of wood”, (e) ”Fishing boat made of wood planks”.</li>
-    </ul>
-    
+    <br />
+  <h2 align="left"><a name="example_results" id="example_results"></a>Target Text Specificity</h2>
+    <p align="left">
+        The following results show an experiment where we vary the specificity of a target and how it affects the stylization.
+        The first column show the swan examples and the second column shows the boat examples.  <br />
+        Global target text prompts:
+        <ul>
+          <li>Row one: (a) ”Armor”, (b) ”Iron armor”, (c) ”Medieval iron armor”, (d) ”Suit of shiny medieval iron armor”, (e) ”Full plate shiny medieval iron armor”  </li>
+          <li>Row two: (a) ”Boat made of wood”, (b) ”Boat made of dark walnut wood" (c) ”Fishing boat made of wood”, (d) ”Old fishing boat made of wood”, (e) ”Fishing boat made of wood planks”.</li>
+        </ul>
   <p align="left"></p>
-  <table width="200" border="0" align="center">
+  <table width="80%" border="0" align="center">
     <tbody>
-      <tr>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/target_text_specificity_fig5/armor.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/target_text_specificity_fig5/iron_armor.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/target_text_specificity_fig5/medieval_iron_armor.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/target_text_specificity_fig5/suit_of_shinny_medieval_iron_armor.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/target_text_specificity_fig5/full_plate_shinny_medieval_iron_armor.mp4" type="video/mp4" />
-        </video></td>
         <tr>
-          <td align="center">(a)</td>
-          <td align="center">(b)</td>
-          <td align="center">(c)</td>
-          <td align="center">(d)</td>
-          <td align="center">(e)</td>
-        </tr>
-      </tr>
-      <tr>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/target_text_specificity_fig5/boat_made_of_wood.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/target_text_specificity_fig5/Boatmade_of_dark_walnut_wood.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/target_text_specificity_fig5/fishing_boat_made_of_wood.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/target_text_specificity_fig5/old_fishing_boat_made_of_wood.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/target_text_specificity_fig5/fishing_boat_made_of_wood_planks.mp4" type="video/mp4" />
-        </video></td>
-        <tr>
-          <td align="center">(a)</td>
-          <td align="center">(b)</td>
-          <td align="center">(c)</td>
-          <td align="center">(d)</td>
-          <td align="center">(e)</td>
-        </tr>
-      </tr>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/target_text_specificity_fig5/armor.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/target_text_specificity_fig5/iron_armor.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/target_text_specificity_fig5/medieval_iron_armor.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/target_text_specificity_fig5/suit_of_shinny_medieval_iron_armor.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/target_text_specificity_fig5/full_plate_shinny_medieval_iron_armor.mp4" type="video/mp4" />
+            </video></td>
+            <tr>
+              <td align="center">(a)</td>
+              <td align="center">(b)</td>
+              <td align="center">(c)</td>
+              <td align="center">(d)</td>
+              <td align="center">(e)</td>
+            </tr>
+          </tr>
+          <tr>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/target_text_specificity_fig5/boat_made_of_wood.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/target_text_specificity_fig5/Boatmade_of_dark_walnut_wood.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/target_text_specificity_fig5/fishing_boat_made_of_wood.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/target_text_specificity_fig5/old_fishing_boat_made_of_wood.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/target_text_specificity_fig5/fishing_boat_made_of_wood_planks.mp4" type="video/mp4" />
+            </video></td>
+            <tr>
+              <td align="center">(a)</td>
+              <td align="center">(b)</td>
+              <td align="center">(c)</td>
+              <td align="center">(d)</td>
+              <td align="center">(e)</td>
+            </tr>
+          </tr>
     </tbody>
   </table>
   <br />
-  
   <hr />
-  <h2 align="left"><a name="prefix_aug" id="prefix_aug"></a>Prefix Augmentations</h2>
-  
+  <h2 align="left"><a name="prefix_augs" id="prefix_augs"></a>Prefix Augmentations</h2>
   <p align="left">
-    The following videos correspond to Fig. 6 of the paper. <br />
+    The following results show how varying the number of prefixes used for the target text affects the stylization.  <br />
     The examples use the following texts:
     <ul>
       <li> Row one: Global target text: ”Origami swan with white paper skin”, and local target text: ”Origami white paper
@@ -197,166 +208,124 @@
     </ul>
   The experiment configurations are (a) no prefixes, (b) 4 local, no global, (c) 4 global, no local (d) 4
   global & 4 local, (e) 8 global & 8 local. The specific prefixes are described in Section 6.3 of the paper.
-    </p>
-    <table width="200" border="0" align="center">
-      <tbody>
+</p>
+  <table width="80%" border="0" align="center">
+    <tbody>
         <tr>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_no_prefixes.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_no_global_prefixes.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_no_local_prefixes.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_4_global_4_local.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_8_local_8_global.mp4" type="video/mp4" />
-          </video></td>
-        </tr>
-        <tr>
-            <td align="center">(a)</td>
-            <td align="center">(b)</td>
-            <td align="center">(c)</td>
-            <td align="center">(d)</td>
-            <td align="center">(e)</td>
-        </tr>
-        <tr>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/no_local_no_global.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/4_local_no_global.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/4_global_no_local.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/4_local_4_global.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/8_local_8_global.mp4" type="video/mp4" />
-          </video></td>
-        </tr>
-        <tr>
-            <td align="center">(a)</td>
-            <td align="center">(b)</td>
-            <td align="center">(c)</td>
-            <td align="center">(d)</td>
-            <td align="center">(e)</td>
-        </tr>
-      </tbody>
-    </table>  <p></p>
-    <hr />
-    <h2 align="left"><a name="ablation" id="ablation"></a>Abaltion Of Losses</h2>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_no_prefixes.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+              <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_no_global_prefixes.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_no_local_prefixes.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_4_global_4_local.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_8_local_8_global.mp4" type="video/mp4" />
+            </video></td>
+          </tr>
+          <tr>
+              <td align="center">(a)</td>
+              <td align="center">(b)</td>
+              <td align="center">(c)</td>
+              <td align="center">(d)</td>
+              <td align="center">(e)</td>
+          </tr>
+          <tr>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/no_local_no_global.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/4_local_no_global.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/4_global_no_local.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/4_local_4_global.mp4" type="video/mp4" />
+            </video></td>
+            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/8_local_8_global.mp4" type="video/mp4" />
+            </video></td>
+          </tr>
+          <tr>
+              <td align="center">(a)</td>
+              <td align="center">(b)</td>
+              <td align="center">(c)</td>
+              <td align="center">(d)</td>
+              <td align="center">(e)</td>
+          </tr>
+    </tbody>
+  </table>  <p></p>
+  <hr />
+  <h2 align="left"><a name="ablation" id="ablation"></a>Abaltion Of Losses</h2>
   <p align="left">
-    The following videos correspond to Fig. 7 of the paper. <br />
+    The following results show the affects of each of our loss terms. We ablate each loss term and show how it effects the stylization and quality. <br />
     The global target text used: ”A swan with crocodile skin” <br />
     The local target text used: ”Crocodile skin”. <br />
    (a) All losses, (b) w/o local loss, (c) w/o global loss, (d) w/o temporal loss, (e) w/o sparsity loss. 
-    </p>
-    <table width="200" border="0" align="center">
-      <tbody>
-        <tr>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/ablation_crocodile_fig7/all.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/ablation_crocodile_fig7/no_local.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/ablation_crocodile_fig7/no_global.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/ablation_crocodile_fig7/no_temporal.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/ablation_crocodile_fig7/no_sparsity.mp4" type="video/mp4" />
-          </video></td>
-        </tr>
-        <tr>
-          <td align="center">(a)</td>
-          <td align="center">(b)</td>
-          <td align="center">(c)</td>
-          <td align="center">(d)</td>
-          <td align="center">(e)</td>
+  </p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+            <source src="stylized_videos/ablation_crocodile_fig7/all.mp4" type="video/mp4" />
+        </video></td>
+        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+            <source src="stylized_videos/ablation_crocodile_fig7/no_local.mp4" type="video/mp4" />
+        </video></td>
+        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+            <source src="stylized_videos/ablation_crocodile_fig7/no_global.mp4" type="video/mp4" />
+        </video></td>
+        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+            <source src="stylized_videos/ablation_crocodile_fig7/no_temporal.mp4" type="video/mp4" />
+        </video></td>
+        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
+            <source src="stylized_videos/ablation_crocodile_fig7/no_sparsity.mp4" type="video/mp4" />
+        </video></td>
       </tr>
-      </tbody>
-    </table>  <p></p>
-    <hr />
-
-    <h2 align="left"><a name="globa_local_semantics" id="globa_local_semantics"></a>Global and Local Semantics</h2>
-    <p align="left">
-    The following videos correspond to Fig. 8 of the paper. <br />
+      <tr>
+        <td align="center">(a)</td>
+        <td align="center">(b)</td>
+        <td align="center">(c)</td>
+        <td align="center">(d)</td>
+        <td align="center">(e)</td>
+    </tr>
+    </tbody>
+  </table>  <p></p>
+  <hr />
+  <h2 align="left"><a name="global_local_semantics" id="global_local_semantics"></a>Global and Local Semantics</h2>
+  <p align="left">
+    The following videos show how changing the local and global target texts affects the stylization <br />
     The target texts used for the stylization: <br />
     <ul>
       <li>(a) Global target text: ”Swan with cactus skin”,  Local target text:: ”Cactus skin”</li>
       <li>(b) Global target text: ”Swan with cactus skin”, Local target text: ”Rough cactus skin”</li>
       <li>(c) Global target text: ”Swan made out of cactus”, Local target text: ”Catus skin”. </li>
     </ul>
-     
-     
-   
-    </p>
-    <table width="200" border="0" align="center">
-      <tbody>
-        <tr>
-          <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/cactus_ablation_global_local_fig_8/swan_with_cactus_skin_cactus_skin.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/cactus_ablation_global_local_fig_8/swan_with_cactus_skin_rough_cactus_skin.mp4" type="video/mp4" />
-          </video></td>
-          <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/cactus_ablation_global_local_fig_8/swan_made_out_of_cactus_catus_skin.mp4" type="video/mp4" />
-          </video></td>
-          </td>
-        </tr>
-        <tr>
-          <td align="center">(a)</td>
-          <td align="center">(b)</td>
-          <td align="center">(c)</td>
-        </tr>
-      </tbody>
-    </table>  <p></p>
-    <p align="left"></p>
-    <hr />
-  
-
-  
-    <h2 align="left"><a name="limitations" id="limitations"></a>Limitations</h2>
-  <p align="left">
-  The following videos correspond to Fig. 9 of the paper. <br />
-  The target texts used for the stylization:
-   <ul>
-     
-   
-    <li>(a) Global target text: ”Swan with cactus skin”, Local target text: ”Cactus skin” </li>
-    <li>(b) Global target text: ”Boat made out of chocolate”, Local target text: ”Chocolate texture” </li>
-    <li>(c) Global target text: ”A dog with zebra fur”, Local target text: ”Zebra fur”. </li>
-   </ul>
   </p>
-  <table width="200" border="0" align="center">
+  <table width="80%" border="0" align="center">
     <tbody>
       <tr>
         <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/limitations_fig9/cactus_swan_limitation.mp4" type="video/mp4" />
+            <source src="stylized_videos/cactus_ablation_global_local_fig_8/swan_with_cactus_skin_cactus_skin.mp4" type="video/mp4" />
         </video></td>
-           <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/limitations_fig9/chocolate_boat_limitation.mp4" type="video/mp4" />
-                    </video></td>
-           <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/limitations_fig9/limitations_zebra_dog.mp4" type="video/mp4" />
-                    </video></td>
+        <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
+            <source src="stylized_videos/cactus_ablation_global_local_fig_8/swan_with_cactus_skin_rough_cactus_skin.mp4" type="video/mp4" />
+        </video></td>
+        <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
+            <source src="stylized_videos/cactus_ablation_global_local_fig_8/swan_made_out_of_cactus_catus_skin.mp4" type="video/mp4" />
+        </video></td>
         </td>
       </tr>
       <tr>
         <td align="center">(a)</td>
-          <td align="center">(b)</td>
-          <td align="center">(c)</td>
+        <td align="center">(b)</td>
+        <td align="center">(c)</td>
       </tr>
     </tbody>
   </table>  <p></p>
@@ -365,35 +334,23 @@
   
 </div>
 
-<script type="text/javascript">
-  
-window.addEventListener('load', videoScroll);
-window.addEventListener('scroll', videoScroll);
-
-function videoScroll() {
-
-  if ( document.querySelectorAll('video[autoplay]').length > 0) {
-    var windowHeight = window.innerHeight,
-        videoEl = document.querySelectorAll('video[autoplay]');
-
-    for (var i = 0; i < videoEl.length; i++) {
-
-      var thisVideoEl = videoEl[i],
-          videoHeight = thisVideoEl.clientHeight,
-          videoClientRect = thisVideoEl.getBoundingClientRect().top;
-
-      if ( videoClientRect <= ( (windowHeight) - (videoHeight*.5) ) && videoClientRect >= ( 0 - ( videoHeight*.5 ) ) ) {
-        thisVideoEl.play();
-      } else {
-        thisVideoEl.pause();
-      }
-
-    }
-  }
-
-}
-
-</script>
+    <div align="center" class="section">
+      <h3>Citation</h3>
+      <div class="form-group col-md-10">
+        <textarea id="bibtex" class="form-control" rows=6 readonly>
+@article{benaim2022volumetricexample_results,
+  title={Text-Driven Stylization of Video Objects},
+  author={Sagie Benaim and Frederik Warburg and Peter Ebert Christensen and Serge Belongie},
+  journal={arXiv},
+  year={2022}
+}</textarea>
+  <br />
+      <h3>Acknowledgement</h3>
+<p align="left">
+This research was supported by the Pioneer Centre for AI, DNRF grant number P1.
+</p>
+      </div>
+    </div>
 
 
 </body>
