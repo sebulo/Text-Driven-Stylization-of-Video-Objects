@@ -57,24 +57,13 @@ This is a challenging task as the resulting video must satisfy multiple properti
         <br>
         <b> TL;DR </b> We propose a framework for stylizing objects in videos using a text-prompt.
         </p>
-        <table width="80%" border="0" align="center">
+        <table width="100%" border="0" align="center">
           <tbody>
             <tr>
-              <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-                  <source src="stylized_videos/examples_fig4/org_swan.mp4" type="video/mp4" />
-              </video></td>
-              <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-                  <source src="stylized_videos/teaser_fig1/swan_made_out_of_cactus_catus_skin.mp4" type="video/mp4" />
-              </video></td>
-              <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-                  <source src="stylized_videos/teaser_fig1/crocodile_swan_teaser.mp4" type="video/mp4" />
+              <td align="center"><video width="100%" controls="controls" autoplay muted playsinline loop>
+                  <source src="stylized_videos/teaser.mov" type="video/mp4" />
               </video></td>
               </td>
-            </tr>
-            <tr>
-              <td align="center">Input video</td>
-              <td align="center">"A swan made out of cactus"</td>
-              <td align="center">"A swan with crocodile skin"</td>
             </tr>
           </tbody>
         </table> 
@@ -92,61 +81,33 @@ This is a challenging task as the resulting video must satisfy multiple properti
     The following results show how we can successfully apply a stylization to a variety of objects and videos for a different set of target texts. 
     The first video corresponds to the input video and the others correspond to stylizations applied to the input video.
   <p align="left"></p>
-  <table width="80%" border="0" align="center">
+  <table width="100%" border="0" align="center">
     <tbody>
       <tr>
       
         <td align="center">
-          <video width="267" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/examples_fig4/org_swan.mp4" type="video/mp4" />
+          <video width="100%" controls="controls" autoplay muted playsinline loop>
+            <source src="stylized_videos/swan_ex_row1.mov" type="video/mp4" />
           </video>
-        </td>
-         <td align="center"><video width="267" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/examples_fig4/metal_swan.mp4" type="video/mp4" />
-        </video></td>
-         <td align="center"><video width="267" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/examples_fig4/swan_rough_brak_skin.mp4" type="video/mp4" />
-        </video></td>
       </tr>
+
       <tr>
-        <td align="center">"Swan"</td>
-        <td align="center">”Shiny metal swan”</td>
-        <td align="center">”Swan with wood bark skin”</td>
+
+        <td align="center">
+          <video width="100%" controls="controls" autoplay muted playsinline loop>
+            <source src="stylized_videos/boat_ex_row2.mov" type="video/mp4" />
+          </video>
       </tr>
-            <tr>
-        <td align="center"><video width="267" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/examples_fig4/org_boat.mp4" type="video/mp4" />
-        </video></td>
-         <td align="center"><video width="267" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/examples_fig4/shiny_alu_metal1.mp4" type="video/mp4" />
-        </video></td>
-         <td align="center"><video width="267" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/examples_fig4/shiny_cobber.mp4" type="video/mp4" />
-        </video></td>
-      </tr>
+      
       <tr>
-        <td align="center">"Boat"</td>
-        <td align="center">"Shiny aluminum fishing boat”</td>
-        <td align="center">”Boat made of copper”</td>
-      </tr>
-      <tr>
-        <td align="center"><video width="267" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/examples_fig4/org_libby.mp4" type="video/mp4" />
-        </video></td>
-         <td align="center"><video width="267" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/examples_fig4/dog_zebra.mp4" type="video/mp4" />
-        </video></td>
-         <td align="center"><video width="267" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/examples_fig4/gold_libby.mp4" type="video/mp4" />
-        </video></td>
-      </tr>
-       <tr>
-        <td align="center">”Dog"</td>
-        <td align="center">”Dog with zebra fur"</td>
-        <td align="center">"Golden dog”</td>
+        <td align="center">
+          <video width="100%" controls="controls" autoplay muted playsinline loop>
+            <source src="stylized_videos/dog_ex_row3.mov" type="video/mp4" />
+          </video>
       </tr>
     </tbody>
   </table>
+
     <br />
   <h2 align="left"><a name="example_results" id="example_results"></a>Target Text Specificity</h2>
     <p align="left">
@@ -157,55 +118,16 @@ This is a challenging task as the resulting video must satisfy multiple properti
           <li>Row two: (a) ”Boat made of wood”, (b) ”Boat made of dark walnut wood" (c) ”Fishing boat made of wood”, (d) ”Old fishing boat made of wood”, (e) ”Fishing boat made of wood planks”.</li>
         </ul>
   <p align="left"></p>
-  <table width="80%" border="0" align="center">
+  <table width="100%" border="0" align="center">
     <tbody>
         <tr>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/target_text_specificity_fig5/armor.mp4" type="video/mp4" />
+            <td align="center"><video width="100%" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/swan_specific.mov" type="video/mp4" />
             </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/target_text_specificity_fig5/iron_armor.mp4" type="video/mp4" />
-            </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/target_text_specificity_fig5/medieval_iron_armor.mp4" type="video/mp4" />
-            </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/target_text_specificity_fig5/suit_of_shinny_medieval_iron_armor.mp4" type="video/mp4" />
-            </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/target_text_specificity_fig5/full_plate_shinny_medieval_iron_armor.mp4" type="video/mp4" />
-            </video></td>
-            <tr>
-              <td align="center">(a)</td>
-              <td align="center">(b)</td>
-              <td align="center">(c)</td>
-              <td align="center">(d)</td>
-              <td align="center">(e)</td>
-            </tr>
-          </tr>
           <tr>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/target_text_specificity_fig5/boat_made_of_wood.mp4" type="video/mp4" />
+            <td align="center"><video width="100%" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/boat_specific.mov" type="video/mp4" />
             </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/target_text_specificity_fig5/Boatmade_of_dark_walnut_wood.mp4" type="video/mp4" />
-            </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/target_text_specificity_fig5/fishing_boat_made_of_wood.mp4" type="video/mp4" />
-            </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/target_text_specificity_fig5/old_fishing_boat_made_of_wood.mp4" type="video/mp4" />
-            </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/target_text_specificity_fig5/fishing_boat_made_of_wood_planks.mp4" type="video/mp4" />
-            </video></td>
-            <tr>
-              <td align="center">(a)</td>
-              <td align="center">(b)</td>
-              <td align="center">(c)</td>
-              <td align="center">(d)</td>
-              <td align="center">(e)</td>
-            </tr>
           </tr>
     </tbody>
   </table>
@@ -223,56 +145,16 @@ This is a challenging task as the resulting video must satisfy multiple properti
         tiger fur”.
     </ul>
 </p>
-  <table width="80%" border="0" align="center">
+  <table width="100%" border="0" align="center">
     <tbody>
         <tr>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_no_prefixes.mp4" type="video/mp4" />
+            <td align="center"><video width="100%" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/prefix1.mov" type="video/mp4" />
             </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-              <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_no_global_prefixes.mp4" type="video/mp4" />
-            </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_no_local_prefixes.mp4" type="video/mp4" />
-            </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_4_global_4_local.mp4" type="video/mp4" />
-            </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/prefix_exp_paper_fig6/origami_swan/swan_8_local_8_global.mp4" type="video/mp4" />
-            </video></td>
-          </tr>
           <tr>
-              <td align="center">(a)</td>
-              <td align="center">(b)</td>
-              <td align="center">(c)</td>
-              <td align="center">(d)</td>
-              <td align="center">(e)</td>
-          </tr>
-          <tr>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/no_local_no_global.mp4" type="video/mp4" />
+            <td align="center"><video width="100%" controls="controls" autoplay muted playsinline loop>
+                <source src="stylized_videos/prefix2.mov" type="video/mp4" />
             </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/4_local_no_global.mp4" type="video/mp4" />
-            </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/4_global_no_local.mp4" type="video/mp4" />
-            </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/4_local_4_global.mp4" type="video/mp4" />
-            </video></td>
-            <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-                <source src="stylized_videos/prefix_exp_paper_fig6/tiger_dog/8_local_8_global.mp4" type="video/mp4" />
-            </video></td>
-          </tr>
-          <tr>
-              <td align="center">(a)</td>
-              <td align="center">(b)</td>
-              <td align="center">(c)</td>
-              <td align="center">(d)</td>
-              <td align="center">(e)</td>
-          </tr>
     </tbody>
   </table>  <p></p>
   <hr />
@@ -282,32 +164,13 @@ This is a challenging task as the resulting video must satisfy multiple properti
     The global target text used: ”A swan with crocodile skin”.
     The local target text used: ”Crocodile skin”.
   </p>
-  <table width="200" border="0" align="center">
+  <table width="100%" border="0" align="center">
     <tbody>
       <tr>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/ablation_crocodile_fig7/all.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/ablation_crocodile_fig7/no_local.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/ablation_crocodile_fig7/no_global.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/ablation_crocodile_fig7/no_temporal.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="200" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/ablation_crocodile_fig7/no_sparsity.mp4" type="video/mp4" />
+        <td align="center"><video width="100%" controls="controls" autoplay muted playsinline loop>
+            <source src="stylized_videos/ablation.mov" type="video/mp4" />
         </video></td>
       </tr>
-      <tr>
-        <td align="center">All losses</td>
-        <td align="center">w/o local loss</td>
-        <td align="center">w/o global loss</td>
-        <td align="center">w/o temporal loss</td>
-        <td align="center">w/o sparsity loss</td>
-    </tr>
     </tbody>
   </table>  <p></p>
   <hr />
@@ -315,30 +178,13 @@ This is a challenging task as the resulting video must satisfy multiple properti
   <p align="left">
     The following videos show how changing the local and global target texts affects the stylization. The first row of target texts shows the global target text and the second row shows the local target text: 
   </p>
-  <table width="80%" border="0" align="center">
+  <table width="100%" border="0" align="center">
     <tbody>
       <tr>
-        <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/cactus_ablation_global_local_fig_8/swan_with_cactus_skin_cactus_skin.mp4" type="video/mp4" />
+        <td align="center"><video width="100%" controls="controls" autoplay muted playsinline loop>
+            <source src="stylized_videos/specificty_cactus.mov" type="video/mp4" />
         </video></td>
-        <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/cactus_ablation_global_local_fig_8/swan_with_cactus_skin_rough_cactus_skin.mp4" type="video/mp4" />
-        </video></td>
-        <td align="center"><video width="300" controls="controls" autoplay muted playsinline loop>
-            <source src="stylized_videos/cactus_ablation_global_local_fig_8/swan_made_out_of_cactus_catus_skin.mp4" type="video/mp4" />
-        </video></td>
-        </td>
-      </tr>
-      <tr>
-        <td align="center">”Swan with cactus skin”</td>
-        <td align="center">”Swan with cactus skin”</td>
-        <td align="center">"Swan made out of cactus"</td>
-      </tr>
-      <tr>
-        <td align="center">”Cactus skin"</td>
-        <td align="center">”Rough cactus skin"</td>
-        <td align="center">”Cactus skin"</td>
-      </tr>
+       
     </tbody>
   </table>  <p></p>
   <p align="left"></p>
